@@ -1,41 +1,42 @@
 # Auth Req
 
-基于 Token 的简单认证系统。
+A simple token-based authentication system.
 
-## 环境变量
+## Environment Variables
 
-开发环境：
+Development:
+
 ```bash
 cp .env.example .env
-# 设置登录 Token
-LOGIN_TOKEN=你的访问凭证
+# Set the login token
+LOGIN_TOKEN=your-access-credential
 
-# （可选）设置 Cookie 名称，默认 auth-token
+# (Optional) Set the cookie name, defaults to auth-token
 COOKIE_NAME=auth-token
 
-# （可选）设置跨子域共享 Cookie 的域名
-# 例如希望在 auth.example.com 和 app.example.com 之间共享：
+# (Optional) Set the domain for sharing cookies across subdomains
+# For example, to share between auth.example.com and app.example.com:
 COOKIE_DOMAIN=.example.com
 ```
 
-生产环境：创建 `.env` 文件设置：
+Production: create a `.env` file with:
 
 ```bash
-LOGIN_TOKEN=你的访问凭证
-# 可选，Cookie 名称
+LOGIN_TOKEN=your-access-credential
+# Optional, cookie name
 COOKIE_NAME=auth-token
-# 可选，如果需要跨子域共享 Cookie 则配置
+# Optional, configure if you need to share cookies across subdomains
 COOKIE_DOMAIN=.example.com
 ```
 
-## 快速开始
+## Quick Start
 
 ```bash
 bun install
 bun run dev
 ```
 
-## 技术栈
+## Tech Stack
 
 - Runtime: Bun
 - Framework: Next.js 16 (App Router)
